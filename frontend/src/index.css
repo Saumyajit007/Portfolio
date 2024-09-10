@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.works {
+    @apply w-full h-0 absolute overflow-hidden text-white flex items-center justify-center flex-col text-center text-base transition-all duration-500 px-10 py-0 rounded-xl left-0 bottom-0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #c6f5e3);
+  }
+
+.project:hover .works {
+    @apply h-full;
+  }
+
+  /* .emailform {
+    @apply;
+  } */
+  /* .emailform div input {
+    @apply w-32 h-10;
+  } */
