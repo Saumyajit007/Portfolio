@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import images from "../assets/frontend-projects.png"
 import { Link } from 'react-router-dom'
 Link
-function EachProjects({ imageurl = images, projectname = "Frontend Projects", description = "Some of my frontend practice project using HTML CSS & JavaScript",links="https://github.com/Saumyajit007/Saumyajit007-Frontend_Projects"}) {
+function EachProjects({ imageurl = images, projectname = "Frontend Projects", description = "Some of my frontend practice project using HTML CSS & JavaScript", links = "https://github.com/Saumyajit007/Saumyajit007-Frontend_Projects" }) {
 
   const [onHover, setOnHover] = useState(false)
   return (
@@ -22,10 +22,10 @@ function EachProjects({ imageurl = images, projectname = "Frontend Projects", de
           </div>
 
         </div>
+        <div className='works'>
+          <h1 className='text-3xl'>view...</h1>
+        </div>
       </Link>
-      <div className='works'>
-        <h1 className='text-3xl'>view...</h1>
-      </div>
     </div>
   )
 }

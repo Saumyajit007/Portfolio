@@ -15,12 +15,8 @@ gsap.registerPlugin(ScrollTrigger)
 function Home() {
 
   const [tagLine, setTagLine] = useState("Fullstack Devoloper")
-  const [empArr, setEmpArr] = useState([])
-  const tagArr = ["Fullstack Devoloper", "Software Engineer", "Quick learner", "Team player"]
   const tagref = useRef()
-  let empstr = ''
   let splittag = tagLine.split('')
-  const scrolltrg=useRef()
 
   useGSAP(() => {
     gsap.from(".a", {
@@ -30,19 +26,6 @@ function Home() {
       scale: 0,
     })
   }, { scope: tagref, dependencies: splittag })
-
-  // useGSAP(() => {
-  //  gsap.utils.toArray(".panel").forEach((panel,i)=>{
-  //   ScrollTrigger.create({
-  //     trigger:panel,
-  //     start:"top top",
-  //     end:()=>"+="+ document.querySelector(".panel").offsetHeight,
-  //     pin: true,
-  //     anticipatePin:1
-  //   })
-  //  })
-
-  // })
 
   return (
     <div className='scroll-smooth' >
@@ -80,9 +63,6 @@ function Home() {
               className='my-icon mx-1'
             /><span>resume</span></Link>
           </div>
-          {/* <div className='text-2xl'>
-            rate my job
-          </div> */}
         </div>
       </div>
       <div className='flex justify-center items-center text-3xl sm:text-5xl font-semibold bg-[#004D43] rounded-t-3xl text-slate-200 panel'>

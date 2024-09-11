@@ -10,8 +10,8 @@ function Contacts() {
         e.preventDefault();
 
         emailjs
-            .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
-                publicKey: 'YOUR_PUBLIC_KEY',
+            .sendForm('service_lkxyfy9', 'template_1ojewr3', form.current, {
+                publicKey: `${process.env.REACT_APP_PUBLIC_KEY}`,
             })
             .then(
                 () => {
@@ -29,11 +29,11 @@ function Contacts() {
                 <form ref={form} onSubmit={sendEmail} className='flex flex-col border-2 border-black p-4 rounded-xl my-2 w-[40%]'>
                     <div className='font-semibold text-xl mt-2'>
                         <label className='mx-2' htmlFor='name'>Name : </label>
-                        <input type="text" name="user_name" id='name' placeholder='Enter your name' className='text-base rounded-xl h-10 px-2 w-[85%]' />
+                        <input type="text" name="from_name" id='name' placeholder='Enter your name' className='text-base rounded-xl h-10 px-2 w-[85%]' />
                     </div>
                     <div className='font-semibold text-xl mt-2'>
                         <label htmlFor='email' className='mx-[10px]'>Email : </label>
-                        <input type="email" name="user_email" id='email' placeholder='Enter your email' className='text-base rounded-xl h-10 px-2 w-[85%]' />
+                        <input type="email" name="from_email" id='email' placeholder='Enter your email' className='text-base rounded-xl h-10 px-2 w-[85%]' />
                     </div>
                     <div className='font-semibold text-xl mt-2'>
                         <label htmlFor='message' className='mx-2'>Message : </label>
@@ -62,7 +62,6 @@ function Contacts() {
                             size={32}
                             className='my-icon mx-1'
                         /><span>resume</span></Link>
-
                     </div>
                 </div>
             </div>
