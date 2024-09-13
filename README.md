@@ -8,5 +8,5 @@ This portfolio website serves as a platform to present my skills, projects, and 
 
 
 Deployment
-I have hosted this website on Netlify. You can visit it here- [https://sharmili-s-portfolio.vercel.app/]
+I have hosted this website on Netlify. You can visit it here- [https://saumyajitpaul.netlify.app/]
 
