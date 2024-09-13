@@ -7,25 +7,30 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import { Toaster } from "react-hot-toast"
 
 const router = createBrowserRouter([
   {
-    path:"/",
-    element:<App/>,
-    children:[
+    path: "/",
+    element: <App />,
+    children: [
       {
         path: "/",
-        element:<Home/>,
+        element: <Home />,
       },
       {
         path: "/about",
-        element:<About/>,
+        element: <About />,
       },
     ]
   }
 ]);
 createRoot(document.getElementById('root')).render(
   <>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
+    <Toaster
+      position="bottom-center"
+      reverseOrder={false}
+    />
   </>,
 )
