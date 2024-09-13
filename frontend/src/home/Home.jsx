@@ -26,6 +26,10 @@ function Home() {
       scale: 0,
     })
   }, { scope: tagref, dependencies: splittag })
+const emni=()=>{
+  setTagLine((prec)=>prec+"emni")
+  console.log(tagLine)
+}
 
   return (
     <div className='scroll-smooth' >

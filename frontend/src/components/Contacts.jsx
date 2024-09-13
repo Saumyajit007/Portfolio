@@ -26,21 +26,21 @@ function Contacts() {
         <div className='pt-16 sm:pt-20 min-w-[100vw]'>
             <h1 className='text-5xl font-semibold text-center'>Contact Me</h1>
             <div className='flex flex-col items-center'>
-                <form ref={form} onSubmit={sendEmail} className='flex flex-col border-2 border-black p-4 rounded-xl my-2 w-[40%]'>
+                <form ref={form} onSubmit={sendEmail} className='flex flex-col border-2 border-black p-4 rounded-xl my-2 lg:w-[30%] sm:w-[40%] w-[90%] items-center justify-center'>
                     <div className='font-semibold text-xl mt-2'>
                         <label className='mx-2' htmlFor='name'>Name : </label>
-                        <input type="text" name="from_name" id='name' placeholder='Enter your name' className='text-base rounded-xl h-10 px-2 w-[85%]' />
+                        <input type="text" name="from_name" id='name' placeholder='Enter your name' className='text-base rounded-xl h-10 px-2 w-full' />
                     </div>
                     <div className='font-semibold text-xl mt-2'>
                         <label htmlFor='email' className='mx-[10px]'>Email : </label>
-                        <input type="email" name="from_email" id='email' placeholder='Enter your email' className='text-base rounded-xl h-10 px-2 w-[85%]' />
+                        <input type="email" name="from_email" id='email' placeholder='Enter your email' className='text-base rounded-xl h-10 px-2 w-full' />
                     </div>
                     <div className='font-semibold text-xl mt-2'>
                         <label htmlFor='message' className='mx-2'>Message : </label>
-                        <textarea name="message" id='message' className='text-base rounded-xl h-24 px-2 w-[80%]' />
+                        <textarea name="message" id='message' className='text-base rounded-xl h-24 px-2 w-full' />
                     </div>
                     <div className='flex justify-center'>
-                        <input type="submit" value="Send" className='text-2xl font-bold px-6 py-3 leading-none text-gray-200 border border-gray-800 rounded-3xl focus:outline-none focus:shadow-outline bg-gradient-to-b hover:from-indigo-500 from-gray-900 to-black hover:text-slate-900 w-[30%] cursor-pointer mt-6 font-nameheader tracking-wider' />
+                        <input type="submit" value="Send" className='text-2xl font-bold px-6 py-3 leading-none text-gray-200 border border-gray-800 rounded-3xl focus:outline-none focus:shadow-outline bg-gradient-to-b hover:from-indigo-500 from-gray-900 to-black hover:text-slate-900 w-[100px] sm:w-[200px] cursor-pointer mt-6 font-nameheader tracking-wider text-center' />
                     </div>
                 </form>
                 <div>
