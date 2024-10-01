@@ -6,7 +6,7 @@ function Education() {
     <div className='pt-16 sm:pt-20 min-w-[100vw]'>
       <h1 className='text-5xl font-semibold text-center'>Education</h1>
       <div className=' py-[20px] px-[10px]'>
-        <div className='font-nameheader font-semibold pb-4 text-2xl sm:text-4xl'>
+        <div className='font-serif font-semibold pb-4 text-2xl sm:text-4xl'>
             <h1>Currently Pursuing : B.Tech CSE (Passout : 2025)</h1>
             <h1>University :Swami Vivekananda University</h1>
         </div>

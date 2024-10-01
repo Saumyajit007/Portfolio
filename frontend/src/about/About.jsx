@@ -42,7 +42,7 @@ function About() {
 
   return (
 <div id='scr'className='overflow-x-hidden scroll-smooth' ref={scrollref}>
-<div className='aniscrolls min-h-screen flex border-10 border-2 about'>
+<div className={`${(reSize>640)?`aniscrolls`:''} sm:max-h-screen flex border-10 border-2 about flex-col sm:flex-row`}>
       <Education/>
       <Experience/>
       <Contacts/>

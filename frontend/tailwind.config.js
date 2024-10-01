@@ -8,7 +8,8 @@ export default {
     extend: {},
     fontFamily:{
       nameheader:[ "Nerko One","cursive"],
-      tagfont:["Handjet", "sans-serif"]
+      tagfont:["Handjet", "sans-serif"],
+      serif: ['ui-serif', 'Georgia'],
     }
   },
   plugins: [],
