@@ -61,7 +61,7 @@ function Contacts() {
                             size={38}
                             className="my-icon"
                         /></Link>
-                        <Link to="mailto:sharmilidas06@gmail.com" target='blank'>        <RiMailLine
+                        <Link to="mailto:saumyajitpaul7@gmail.com" target='blank'>        <RiMailLine
                             size={38}
                             className="my-icon"
                         /></Link>
@@ -70,7 +70,7 @@ function Contacts() {
                             className="my-icon"
                         /></Link>
 
-                        <Link to="https://drive.google.com/drive/folders/1qJK6XJHqGi9t_R2tfy7WARdxGZdzO39n" target='blank' className='text-2xl w-[110px] flex flex-nowrap bg-slate-800 text-slate-200 px-1 rounded-xl hover:scale-105'><RiDownloadLine
+                        <Link to="https://drive.google.com/file/d/1Auy7shxW5lTOYY2yjiae5FFzO51LbndZ/view?usp=sharing" target='blank' className='text-2xl w-[110px] flex flex-nowrap bg-slate-800 text-slate-200 px-1 rounded-xl hover:scale-105'><RiDownloadLine
                             size={32}
                             className='my-icon mx-1'
                         /><span>resume</span></Link>

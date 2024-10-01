@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Education from '../components/Education'
 import { useGSAP } from '@gsap/react'
 import { gsap } from "gsap";
@@ -11,10 +11,22 @@ gsap.registerPlugin(ScrollTrigger);
 function About() {
 
   const scrollref=useRef()
-  
+  const [reSize,setReSize]=useState(window.innerWidth)
+  useEffect(()=>{
+    let scSize=window.innerWidth
+    const reSizeScreen=setInterval(() => {
+      if (scSize!=window.innerWidth) {
+        scSize=window.innerWidth
+        setReSize(scSize)
+      }
+    }, 300);
+    return ()=>{
+      clearInterval(reSizeScreen)
+    }
+  },[])
   useGSAP(()=>{
     gsap.to('.aniscrolls',{
-      transform: `translate(-${2*window.innerWidth}px)`,
+      transform: `translate(-${2*reSize}px)`,
       scrollTrigger: {
           trigger: ".aniscrolls",
           // scroller: ".scr",
@@ -25,7 +37,9 @@ function About() {
           pin: true,
       }
     })
-  },{scope:scrollref})
+  },{scope:scrollref,dependencies:[reSize]})
+
+
   return (
 <div id='scr'className='overflow-x-hidden scroll-smooth' ref={scrollref}>
 <div className='aniscrolls min-h-screen flex border-10 border-2 about'>

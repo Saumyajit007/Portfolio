@@ -7,29 +7,42 @@ import Projects from '../components/Projects';
 import Footer from '../components/Footer';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(useGSAP);
-gsap.registerPlugin(ScrollTrigger)
 
 function Home() {
 
-  const [tagLine, setTagLine] = useState("Fullstack Devoloper")
+  const [tagLine, setTagLine] = useState("")
+  const tagArr = ["Fullstack Developer","Frontend Devoloper", "Quick Learner", "Team Player"]
   const tagref = useRef()
-  let splittag = tagLine.split('')
+
+  useEffect(() => {
+    let changeIndex = 0
+    let textStatus = true
+    const changeName = () => {
+      if (changeIndex < 4 && textStatus) {
+        console.log(`hi ${changeIndex}`)
+        setTagLine(tagArr[changeIndex])
+        changeIndex = (changeIndex + 1) % tagArr.length
+        setTimeout(changeName, 6000);
+      }
+    }
+    changeName()
+
+    return () => {
+      textStatus = false
+      console.log(textStatus)
+    }
+  }, [])
 
   useGSAP(() => {
     gsap.from(".a", {
       duration: 1,
-      stagger: 0.15,
+      stagger: 0.2,
       opacity: 0,
       scale: 0,
     })
-  }, { scope: tagref, dependencies: splittag })
-const emni=()=>{
-  setTagLine((prec)=>prec+"emni")
-  console.log(tagLine)
-}
+  }, { scope: tagref, dependencies: [tagLine] })
 
   return (
     <div className='scroll-smooth' >
@@ -42,7 +55,7 @@ const emni=()=>{
         <div className='flex flex-col justify-center items-center font-nameheader text-5xl lg:text-8xl lg:mr-6 lg:items-start lg:max-w-[90vh] sm:ml-6' ref={tagref}>
           <h1>Hey, I am</h1>
           <h1>SAUMYAJIT PAUL</h1>
-          <h1 className='font-tagfont tagline'>{splittag.map((element, index) => {
+          <h1 className='font-tagfont tagline'>{tagLine.split('').map((element, index) => {
             return <span className='a' key={index}>{element}</span>
           })}</h1>
           <div className='flex flex-wrap justify-center'>
@@ -53,7 +66,7 @@ const emni=()=>{
               size={38}
               className="my-icon"
             /></Link>
-            <Link to="mailto:sharmilidas06@gmail.com" target='blank'>        <RiMailLine
+            <Link to="mailto:saumyajitpaul7@gmail.com" target='blank'>        <RiMailLine
               size={38}
               className="my-icon"
             /></Link>
@@ -62,7 +75,7 @@ const emni=()=>{
               className="my-icon"
             /></Link>
 
-            <Link to="https://drive.google.com/drive/folders/1qJK6XJHqGi9t_R2tfy7WARdxGZdzO39n" target='blank' className='text-2xl w-[110px] flex flex-nowrap bg-slate-800 text-slate-200 px-1 rounded-xl hover:scale-105'><RiDownloadLine
+            <Link to="https://drive.google.com/file/d/1Auy7shxW5lTOYY2yjiae5FFzO51LbndZ/view?usp=sharing" target='blank' className='text-2xl w-[110px] flex flex-nowrap bg-slate-800 text-slate-200 px-1 rounded-xl hover:scale-105'><RiDownloadLine
               size={32}
               className='my-icon mx-1'
             /><span>resume</span></Link>
@@ -70,7 +83,7 @@ const emni=()=>{
         </div>
       </div>
       <div className='flex justify-center items-center text-3xl sm:text-5xl font-semibold bg-[#004D43] rounded-t-3xl text-slate-200 panel'>
-        <Technologies/>
+        <Technologies />
       </div>
       <div className='bg-[#CDEA68] panel'>
         <Projects />
