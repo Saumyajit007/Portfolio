@@ -15,7 +15,7 @@ function Experience() {
         {
             companyname:"Texnix (AxisDelta)",
             role:"Fullstack devoloper intern",
-            description:"I worked with profetional devolopers in real time projects based on MERN Stack"
+            description:"I worked with Professional developers in real time projects based on MERN Stack"
         }
     ];
 

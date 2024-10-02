@@ -7,9 +7,10 @@ export default {
   theme: {
     extend: {},
     fontFamily:{
-      nameheader:[ "Nerko One","cursive"],
-      tagfont:["Handjet", "sans-serif"],
       serif: ['ui-serif', 'Georgia'],
+      Teko:['Teko'],
+      Bodoni:['Bodoni Moda'],
+      ramaraja:['Ramaraja']
     }
   },
   plugins: [],

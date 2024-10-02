@@ -15,7 +15,8 @@ function Contacts() {
     const sendEmail = (e) => {
         e.preventDefault();
         // console.log(formData)
-        emailjs
+        if (formData.email!='') {
+            emailjs
             .sendForm('service_lkxyfy9', 'template_1ojewr3', form.current, {
                 publicKey: `${process.env.REACT_APP_PUBLIC_KEY}`,
             })
@@ -33,6 +34,7 @@ function Contacts() {
                     toast.error("Failed to send")
                 },
             );
+        }
     };
     return (
         <div className='pt-16 sm:pt-20 min-w-[100vw]'>
@@ -52,7 +54,7 @@ function Contacts() {
                         <textarea name="message" id='message' className='text-base rounded-xl h-24 px-2 w-full' value={formData.message}  onChange={(e)=>{setFormData({...formData,message:e.target.value})}} />
                     </div>
                     <div className='flex justify-center'>
-                        <input type="submit" value="Send" className='text-2xl font-bold px-6 py-3 leading-none text-gray-200 border border-gray-800 rounded-3xl focus:outline-none focus:shadow-outline bg-gradient-to-b hover:from-indigo-500 from-gray-900 to-black hover:text-slate-900 w-[100px] sm:w-[200px] cursor-pointer mt-6 font-nameheader tracking-wider text-center' />
+                        <input type="submit" value="Send" className='text-2xl font-bold px-6 py-3 leading-none text-gray-200 border border-gray-800 rounded-3xl focus:outline-none focus:shadow-outline bg-gradient-to-b hover:from-indigo-500 from-gray-900 to-black hover:text-slate-900 w-[100px] sm:w-[200px] cursor-pointer mt-6 tracking-wider text-center' />
                     </div>
                 </form>
                 <div>
@@ -70,9 +72,9 @@ function Contacts() {
                             className="my-icon"
                         /></Link>
 
-                        <Link to="https://drive.google.com/file/d/1Auy7shxW5lTOYY2yjiae5FFzO51LbndZ/view?usp=sharing" target='blank' className='text-2xl w-[110px] flex flex-nowrap bg-slate-800 text-slate-200 px-1 rounded-xl hover:scale-105'><RiDownloadLine
+                        <Link to="https://drive.google.com/file/d/1Auy7shxW5lTOYY2yjiae5FFzO51LbndZ/view?usp=sharing" target='blank' className='text-xl w-[110px] flex flex-nowrap bg-slate-800 text-slate-200 px-1 rounded-xl hover:scale-105 pr-2'><RiDownloadLine
                             size={32}
-                            className='my-icon mx-1'
+                            className='mx-1'
                         /><span>resume</span></Link>
                     </div>
                 </div>

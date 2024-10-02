@@ -15,13 +15,13 @@ function Projects() {
     {
       title: "Protfolio Projects",
       imagename: portfolio,
-      description: "Devoloped with React, tailwind ,react-router-dom ,GSAP",
+      description: "Developed with React, tailwind ,react-router-dom ,GSAP",
       projectUrl:"https://github.com/Saumyajit007/Portfolio"
     },
     {
       title: "Chat-app Projects",
       imagename: chat,
-      description: "Devoloped with React, tailwind, redux-toolkit, Express, MongoDB",
+      description: "Developed with React, tailwind, redux-toolkit, Express, MongoDB",
       projectUrl:"https://github.com/Saumyajit007/Chat-app"
     },
   ]
