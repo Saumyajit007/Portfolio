@@ -32,6 +32,7 @@ function Home() {
     return () => {
       textStatus = false
       console.log(textStatus)
+      setTagLine('')
     }
   }, [])
 

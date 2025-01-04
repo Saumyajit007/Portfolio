@@ -2,6 +2,7 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import About from './about/About.jsx'
 import Home from './home/Home.jsx'
+import Error from "./components/Error.jsx"
 import './index.css'
 
 import {
@@ -23,8 +24,13 @@ const router = createBrowserRouter([
         path: "/about",
         element: <About />,
       },
-    ]
-  }
+    ],
+    
+  },
+  {
+    path:"*",
+    element:<Error/>,
+  },
 ]);
 createRoot(document.getElementById('root')).render(
   <>
