@@ -76,7 +76,7 @@ function Home() {
               className="my-icon"
             /></Link>
 
-            <Link to="https://drive.google.com/file/d/1Auy7shxW5lTOYY2yjiae5FFzO51LbndZ/view?usp=sharing" target='blank' className='text-2xl w-[110px] flex flex-nowrap bg-slate-800 text-slate-200 px-1 rounded-xl hover:scale-105 pr-2 '><RiDownloadLine
+            <Link to="https://drive.google.com/file/d/1yIXFNilyWqnnyZU5i1-_yeVDMQ0jkLT7/view?usp=sharing" target='blank' className='text-2xl w-[110px] flex flex-nowrap bg-slate-800 text-slate-200 px-1 rounded-xl hover:scale-105 pr-2 '><RiDownloadLine
               size={32}
               className='my-icon mx-1'
             /><span>resume</span></Link>
