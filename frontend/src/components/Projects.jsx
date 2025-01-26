@@ -22,7 +22,7 @@ function Projects() {
       title: "Chat-app Projects",
       imagename: chat,
       description: "Developed with React, tailwind, redux-toolkit, Express, MongoDB",
-      projectUrl:"https://github.com/Saumyajit007/Chat-app"
+      projectUrl:"https://github.com/Saumyajit007/MERN_chat_app"
     },
   ]
   return (
