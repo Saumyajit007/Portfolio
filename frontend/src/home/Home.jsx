@@ -21,7 +21,6 @@ function Home() {
     let textStatus = true
     const changeName = () => {
       if (changeIndex < tagArr.length && textStatus) {
-        console.log(`hi ${changeIndex}`)
         setTagLine(tagArr[changeIndex])
         changeIndex = (changeIndex + 1) % tagArr.length
         setTimeout(changeName, 6000);
@@ -31,7 +30,7 @@ function Home() {
 
     return () => {
       textStatus = false
-      console.log(textStatus)
+
       setTagLine('')
     }
   }, [])
