@@ -12,6 +12,7 @@ function About() {
 
   const scrollref=useRef()
   const [reSize,setReSize]=useState(window.innerWidth)
+
   useEffect(()=>{
     let scSize=window.innerWidth
     const reSizeScreen=setInterval(() => {
@@ -24,6 +25,7 @@ function About() {
       clearInterval(reSizeScreen)
     }
   },[])
+  
   useGSAP(()=>{
     gsap.to('.aniscrolls',{
       transform: `translate(-${2*reSize}px)`,

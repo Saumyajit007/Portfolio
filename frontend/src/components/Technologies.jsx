@@ -14,6 +14,7 @@ import mysql from "../assets/mysql-official.svg"
 import tailwind from "../assets/icons8-tailwind-css.svg"
 import scss from "../assets/scss.svg"
 import redux from "../assets/icons8-redux.svg"
+import typescript from "../assets/typescript-svgrepo-com.svg"
 function Technologies() {
   return (
     <div className=''>
@@ -36,6 +37,7 @@ function Technologies() {
         <TechCard imglink={php} altname='PHP' />
         <TechCard imglink={mongo} altname='MongoDB' />
         <TechCard imglink={mysql} altname='MySQL' />
+        <TechCard imglink={typescript} altname='TypeScript' />
       </div>
     </div>
   )

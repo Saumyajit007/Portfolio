@@ -1,5 +1,5 @@
 import React from "react";
-import signature from "../assets/signature.png";
+import signature from "../assets/signature.webp";
 import { NavLink } from "react-router-dom";
 import { useParams, useLocation } from "react-router-dom";
 function header() {

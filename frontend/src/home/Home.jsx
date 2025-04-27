@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
-import mypic from "../assets/resume pic.jpg"
+import mypic from "../assets/resume_pic.webp"
 import { Link } from 'react-router-dom';
 import { RiGithubFill, RiMailLine, RiLinkedinLine, RiDownloadLine } from "@remixicon/react";
 import Technologies from '../components/Technologies';

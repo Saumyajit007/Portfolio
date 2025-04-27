@@ -1,6 +1,6 @@
 import React from 'react'
-import certificate from '../assets/fullstack-certificate.png'
-import transparentpic from "../assets/transparent.png"
+import certificate from '../assets/fullstack-certificate.webp'
+import transparentpic from "../assets/transparent.webp"
 function Education() {
   return (
     <div className='pt-16 sm:pt-20 min-w-[100vw]'>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import images from "../assets/frontend-projects.png"
+import images from "../assets/frontend-projects.webp"
 import { Link } from 'react-router-dom'
 Link
 function EachProjects({ imageurl = images, projectname = "Frontend Projects", description = "Some of my frontend practice project using HTML CSS & JavaScript", links = "https://github.com/Saumyajit007/Saumyajit007-Frontend_Projects" }) {
